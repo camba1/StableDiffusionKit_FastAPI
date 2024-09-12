@@ -42,9 +42,11 @@ curl -X 'POST' \
 
 Image generation times:
 - Low quality: ~30-40 seconds
+- Medium quality: ~1.5 minutes
+- High quality: ~1.2 minutes
 - Extreme quality: ~3 minutes
 
-The generation times were obtained by running the API in a Mac M3 Pro with 32 GB of RAM. 
+The generation times were obtained by running the API on a M3 Mac   
 
 ### Environment Variables
 
