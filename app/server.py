@@ -1,7 +1,7 @@
 from typing_extensions import Annotated
 from fastapi import FastAPI, HTTPException, Header, Depends
 from app.routes.image import generate_image
-from app.config import read_config, ImageQualityEnum, RequestConfig
+from app.config import read_config, RequestConfig
 
 
 config = read_config()
