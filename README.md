@@ -1,7 +1,7 @@
 # Local Image Generation API for MacOS
 
 This FastAPI Python project enables local image generation using Stable Diffusion/Flux on an M-based Mac.
-It leverages Diffusion Kit to utilize onboard GPUs.
+It leverages [Diffusion Kit](https://github.com/argmaxinc/DiffusionKit) to utilize onboard GPUs.
 
 ### Image Quality Settings:
 
