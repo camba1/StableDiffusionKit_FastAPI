@@ -4,6 +4,7 @@ from fastapi import HTTPException
 from fastapi.responses import StreamingResponse
 from diffusionkit.mlx import FluxPipeline, DiffusionPipeline
 from app.config import ImageQualityEnum, ModelTypeEnum, AppConfig
+from mlx.core.metal import clear_cache
 
 IMAGE_FORMAT = "png"
 MEDIA_TYPE = f"image/{IMAGE_FORMAT}"
@@ -79,6 +80,7 @@ async def generate_image(config: AppConfig, prompt: str,
         image_byte_stream.seek(0)
 
         # Clean up memory
+        clear_cache()
         gc.collect()
 
         return StreamingResponse(image_byte_stream, media_type=MEDIA_TYPE)
